@@ -17,3 +17,12 @@ def dechiffre_cesar(chiffrement, key):
 
 
 #print (dechiffre_cesar("Boupojo", 1))
+
+def brut_force(test_words , number_keys):
+    globals_solutions = []   
+    for potentiel_key in range(0,number_keys):
+        solution_brut_force = dechiffre_cesar(test_words, potentiel_key)
+        globals_solutions.append(solution_brut_force)
+    return globals_solutions
+
+#print(brut_force("Boupojo", len(alphabet)))
